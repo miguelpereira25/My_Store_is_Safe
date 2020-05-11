@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Store is Safe</string>
+    <string name="covid_tracker">COVID TRACKER</string>
+    <string name="imagem_covid">imagem-covid</string>
+    <string name="client">cliente</string>
+    <string name="apointment">Marcação</string>
+    <string name="name">Nome</string>
+    <string name="social_security_number">Contribuinte</string>
+    <string name="contact">Contacto</string>
+</resources>

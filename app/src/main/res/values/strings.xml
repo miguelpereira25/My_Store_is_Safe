@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Store is Safe</string>
+    <string name="covid_tracker">COVID TRACKER</string>
+    <string name="imagem_covid">image-covid</string>
+    <string name="client">Client</string>
+    <string name="apointment">Apointment</string>
+    <string name="name">Name</string>
+    <string name="social_security_number">Social Security Number</string>
+    <string name="contact">Contact</string>
+</resources>
