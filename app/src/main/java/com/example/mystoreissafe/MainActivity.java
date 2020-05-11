@@ -25,12 +25,31 @@ public class MainActivity extends AppCompatActivity {
         //Toolbar toolbar =findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
         button_cliente = (Button) findViewById(R.id.button_cliente);
-        button_cliente.setOnClickListener(new View.onClickListener(){
+        button_cliente.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 openClient();
             }
         });
+
+        button_agenda = (Button) findViewById(R.id.button_agenda);
+        button_agenda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAgenda();
+
+            }
+        });
+
+        public void openClient(){
+            Intent intent = new Intent(this, cliente.class);
+            startActivity(intent);
+        }
+
+        public void openAgenda(){
+            Intent intent = new Intent(this,Agenda.class);
+            startActivity(intent);
+        }
 
 
 

@@ -7,4 +7,8 @@
     <string name="name">Name</string>
     <string name="social_security_number">Social Security Number</string>
     <string name="contact">Contact</string>
+    <string name="let_s_start_our_day_the_safe_way">Let\'s start our day the safe way</string>
+    <string name="my_store_is_safe">My store Is Safe!</string>
+    <string name="button">Button</string>
+    <string name="bookings">Apointments</string>
 </resources>
