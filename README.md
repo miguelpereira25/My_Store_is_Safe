@@ -1,4 +1,4 @@
-# My_Store_is_Safe
+# My Store is Safe!
 
 
 My project consists of an application where the user can check up on symptoms of himself and others, the idea is to use in small businesses so that they can have the proper records and create a summary at the end of the day.
