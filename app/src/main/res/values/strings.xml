@@ -11,4 +11,5 @@
     <string name="my_store_is_safe">My store Is Safe!</string>
     <string name="button">Button</string>
     <string name="bookings">Apointments</string>
+    <string name="book_apointment">Book Apointment</string>
 </resources>
