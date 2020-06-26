@@ -12,4 +12,6 @@
     <string name="my_store_is_safe">A minha loja está segura!</string>
     <string name="button">button</string>
     <string name="bookings">Marcações</string>
+    <string name="agendado">AGENDADO COM SUCESSO!! </string>
+    <string name="canceled">Cancelado!</string>
 </resources>

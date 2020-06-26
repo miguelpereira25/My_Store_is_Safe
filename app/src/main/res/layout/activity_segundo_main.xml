@@ -9,15 +9,14 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="365dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="347dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="36dp"
         android:text="@string/let_s_start_our_day_the_safe_way"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.347"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -54,8 +53,10 @@
         android:id="@+id/button3"
         android:layout_width="326dp"
         android:layout_height="60dp"
-        android:text="@string/button"
         android:background="@drawable/button"
+        android:text="@string/book_apointment"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.552"

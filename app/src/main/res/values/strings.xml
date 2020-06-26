@@ -12,4 +12,8 @@
     <string name="button">Button</string>
     <string name="bookings">Apointments</string>
     <string name="book_apointment">Book Apointment</string>
+    <string name="always_remember">ALWAYS REMEMBER!!</string>
+    <string name="agendado">BOOKED WITH SUCCESS!!</string>
+    <string name="canceled">Canceled!</string>
+    <string name="todo">TODO</string>
 </resources>
