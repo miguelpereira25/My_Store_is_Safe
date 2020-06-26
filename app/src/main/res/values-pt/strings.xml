@@ -14,4 +14,14 @@
     <string name="bookings">Marcações</string>
     <string name="agendado">AGENDADO COM SUCESSO!! </string>
     <string name="canceled">Cancelado!</string>
+    <string name="book_apointment">Marcar</string>
+    <string name="always_remember">A não esquecer</string>
+    <string name="todo">TODO</string>
+    <string name="adress">Morada</string>
+    <string name="age">Idade</string>
+    <string name="avg_temperature">Temp. Média</string>
+    <string name="save">Guardar</string>
+    <string name="apointment_hour">Hora da Marcação</string>
+    <string name="estimate_time">Tempo estimado</string>
+    <string name="apointment_date">Data da marcação</string>
 </resources>
