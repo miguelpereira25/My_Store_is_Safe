@@ -19,7 +19,7 @@ public class BdStoreOpenHelper extends SQLiteOpenHelper {
      * @param context to use for locating paths to the the database
      */
 
-    public BdStoreOpenHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory) {
+    public BdStoreOpenHelper(@Nullable Context context,@Nullable SQLiteDatabase.CursorFactory factory) {
         super(context,NOME_BASE_DADOS , factory, VERSAO_BASE_DADOS);
     }
     /**
