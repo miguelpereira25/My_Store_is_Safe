@@ -42,8 +42,9 @@
             android:ems="10"
             android:hint="@string/client"
             android:inputType="textPersonName"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            tools:layout_editor_absoluteX="90dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <EditText
             android:id="@+id/editTextTextPersonName3"
