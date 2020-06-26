@@ -16,4 +16,11 @@
     <string name="agendado">BOOKED WITH SUCCESS!!</string>
     <string name="canceled">Canceled!</string>
     <string name="todo">TODO</string>
+    <string name="adress">Adress</string>
+    <string name="age">Age</string>
+    <string name="avg_temperature">AVG Temperature</string>
+    <string name="save">SAVE</string>
+    <string name="apointment_hour">Apointment Hour</string>
+    <string name="estimate_time">Estimate Time</string>
+    <string name="apointment_date">Apointment Date</string>
 </resources>
