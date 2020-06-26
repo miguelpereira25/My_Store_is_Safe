@@ -27,6 +27,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class cliente extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+    private static final int ID_CURSOR_LOADER_CLIENT = 0;
 
     private EditText editText_Name;
     private EditText editText_contribuinte;
@@ -39,16 +40,21 @@ public class cliente extends AppCompatActivity implements LoaderManager.LoaderCa
 
 
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cliente);
         /*Toolbar toolbar = findViewById((R.id.toolbar));*/
-        //setSupportActionBar();
+        //setSupportActionBar(toolbar);
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        editText_Name = (EditText) findViewById(R.id.editText_Name);
+        editText_contribuinte = (EditText) findViewById(R.id.editText_contribuinte);
+        editText_contact = (EditText) findViewById(R.id.editText_contact);
+        editText_adress = (EditText) findViewById(R.id.editText_adress);
+        editText_age = (EditText) findViewById(R.id.editText_age);
+        editText_temp = (EditText) findViewById(R.id.editText_temp);
+        //getSupportLoaderManager().initLoader(ID_CURSOR_LOADER_CLIENT, null, this)
+
         button_back = (Button) findViewById(R.id.button_back);
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
