@@ -21,8 +21,8 @@ public class Agenda extends AppCompatActivity {
         button_agendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openmain();
-                Toast.makeText(Agenda.this,getString(R.string.agendado),Toast.LENGTH_LONG).show();
+                openBook();
+
             }
         });
 
@@ -38,6 +38,10 @@ public class Agenda extends AppCompatActivity {
     }
     public void openmain(){
         Intent intent = new Intent(this,SegundoMain.class);
+        startActivity(intent);
+    }
+    public void openBook(){
+        Intent intent = new Intent(this, BOOk_apointment.class);
         startActivity(intent);
     }
 }

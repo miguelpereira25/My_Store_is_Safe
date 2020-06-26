@@ -23,4 +23,8 @@
     <string name="apointment_hour">Apointment Hour</string>
     <string name="estimate_time">Estimate Time</string>
     <string name="apointment_date">Apointment Date</string>
+    <string name="img1">img1</string>
+    <string name="img3">img3</string>
+    <string name="img4">img4</string>
+    <string name="img.apointment">Back</string>
 </resources>
