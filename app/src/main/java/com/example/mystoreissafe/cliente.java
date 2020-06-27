@@ -1,7 +1,5 @@
 package com.example.mystoreissafe;
 
-import android.content.Context;
-import android.content.CursorLoader;
 import android.content.Intent;
 import android.database.Cursor;
 
@@ -10,20 +8,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.loader.app.LoaderManager;
 
-import androidx.fragment.app.FragmentManager;
-import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.CursorAdapter;
-import android.widget.EditText;
-import android.widget.SimpleCursorAdapter;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 public class cliente extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
@@ -68,13 +59,13 @@ public class cliente extends AppCompatActivity implements LoaderManager.LoaderCa
 
     }
     /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.mainmenu, menu);
+    /*public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menucliente, menu);
         return true;
     }
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.menu) {
+        if (id == R.id.menu_cliente) {
             Intent intent = new Intent(this,RegistoVizinho.class);
             startActivity(intent);
             return true;

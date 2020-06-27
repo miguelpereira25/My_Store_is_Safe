@@ -16,6 +16,7 @@ import android.os.Bundle;
 public class SegundoMain extends AppCompatActivity {
     private Button button_cliente;
     private Button button_agenda;
+    private Button button_book;
 
 
     @Override
@@ -38,6 +39,16 @@ public class SegundoMain extends AppCompatActivity {
 
             }
         });
+
+        button_book = (Button) findViewById((R.id.button_book));
+        button_book.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openBook();
+            }
+        });
+
+
     }
     public void openClient(){
         Intent intent = new Intent(this, cliente.class);
@@ -48,6 +59,13 @@ public class SegundoMain extends AppCompatActivity {
         Intent intent = new Intent(this,Agenda.class);
         startActivity(intent);
     }
+    public void openBook(){
+        Intent intent = new Intent(this, BOOk_apointment.class);
+        startActivity(intent);
+    }
+
+
+
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.mainmenu, menu);
         return true;

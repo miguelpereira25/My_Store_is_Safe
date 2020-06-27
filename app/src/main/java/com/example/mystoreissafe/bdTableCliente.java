@@ -1,5 +1,6 @@
 package com.example.mystoreissafe;
 
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
 
@@ -14,6 +15,8 @@ public class bdTableCliente implements BaseColumns {
     public static final String CAMPO_AGE = "Age";
     public static final String CAMPO_TEMP = "Temperature";
 
+    public static final String[] TODAS_COLUNAS_CLIENTE = new String[] { NOME_TABELA + "." + _ID, CAMPO_NOME, CAMPO_CONTRIBUINTE,CAMPO_CONTACT, CAMPO_ADRESS, CAMPO_AGE, CAMPO_TEMP};
+
 
     private SQLiteDatabase db;
 
@@ -22,14 +25,18 @@ public class bdTableCliente implements BaseColumns {
     }
 
     public void cria(){
-        db.execSQL("CREATE TABLE" + NOME_TABELA+"(" +
+        db.execSQL(
+                "CREATE TABLE" + NOME_TABELA +"(" +
                 _ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"+
                 CAMPO_NOME + "TEXT NOT NULL, " +
                 CAMPO_CONTRIBUINTE + "INTEGER NOT NULL," +
                 CAMPO_CONTACT + "INTEGER NOT NULL," +
                 CAMPO_ADRESS + "TEXT NOT NULL," +
                 CAMPO_AGE + "INTEGER NOT NULL," +
-                CAMPO_TEMP + "INTEGER NOT NULL,"  );
+                CAMPO_TEMP + "INTEGER NOT NULL," +")"
+         );
+
+
 
         
 
