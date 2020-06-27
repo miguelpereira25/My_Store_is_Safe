@@ -24,5 +24,7 @@
     <string name="estimate_time">Estimate Time</string>
     <string name="apointment_date">Apointment Date</string>
     <string name="img1">img1</string>
+    <string name="adicionar_cliente">adicionar cliente</string>
+    <string name="emergencia">emergencia</string>
 
 </resources>

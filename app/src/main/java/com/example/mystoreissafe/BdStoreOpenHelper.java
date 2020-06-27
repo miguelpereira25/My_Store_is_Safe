@@ -33,8 +33,8 @@ public class BdStoreOpenHelper extends SQLiteOpenHelper {
         BdTableMarcacao tabelaMarcacao = new BdTableMarcacao(db);
         tabelaMarcacao.cria();
 
-        bdTableCliente tabelaClientes = new bdTableCliente(db);
-        tabelaClientes.cria();
+        //bdTableCliente tabelaClientes = new bdTableCliente(db);
+        //tabelaClientes.cria();
 
         if (DESENVOLVIMENTO){
             seedData(db);

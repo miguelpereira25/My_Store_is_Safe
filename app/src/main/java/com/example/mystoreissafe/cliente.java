@@ -46,7 +46,7 @@ public class cliente extends AppCompatActivity implements LoaderManager.LoaderCa
         setContentView(R.layout.activity_cliente);
         /*Toolbar toolbar = findViewById((R.id.toolbar));*/
         //setSupportActionBar(toolbar);
-        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         editText_Name = (EditText) findViewById(R.id.editText_Name);
         editText_contribuinte = (EditText) findViewById(R.id.editText_contribuinte);
         editText_contact = (EditText) findViewById(R.id.editText_contact);
@@ -69,10 +69,10 @@ public class cliente extends AppCompatActivity implements LoaderManager.LoaderCa
     }
     /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_addvizinho, menu);
+        getMenuInflater().inflate(R.menu.mainmenu, menu);
         return true;
     }
-    public boolean onOptionsItemSelected(MenuItem item) {
+    /*public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.add_vizinho) {
             Intent intent = new Intent(this,RegistoVizinho.class);
@@ -80,7 +80,7 @@ public class cliente extends AppCompatActivity implements LoaderManager.LoaderCa
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     public void openmain(){
         Intent intent = new Intent(this,SegundoMain.class);

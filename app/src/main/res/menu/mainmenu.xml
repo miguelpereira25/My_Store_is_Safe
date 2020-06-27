@@ -3,10 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/menu_cliente"
         android:icon="@drawable/new_ic_foreground"
         android:title="@string/adicionar_cliente"
         app:showAsAction="ifRoom" />
     <item
+        android:id="@+id/Emergencia"
         android:icon="@drawable/emergency_foreground"
         android:title="@string/emergencia"
         app:showAsAction="ifRoom" />

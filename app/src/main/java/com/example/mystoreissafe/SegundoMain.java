@@ -48,4 +48,18 @@ public class SegundoMain extends AppCompatActivity {
         Intent intent = new Intent(this,Agenda.class);
         startActivity(intent);
     }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.mainmenu, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.menu_cliente) {
+            Intent intent = new Intent(this,cliente.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
+
