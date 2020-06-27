@@ -19,8 +19,8 @@ public class BdStoreOpenHelper extends SQLiteOpenHelper {
      * @param context to use for locating paths to the the database
      */
 
-    public BdStoreOpenHelper(@Nullable Context context,@Nullable SQLiteDatabase.CursorFactory factory) {
-        super(context,NOME_BASE_DADOS , factory, VERSAO_BASE_DADOS);
+    public BdStoreOpenHelper(@Nullable Context context) {
+        super(context,NOME_BASE_DADOS , null, VERSAO_BASE_DADOS);
     }
     /**
      * Called when the database is created for the first time. This is where the
@@ -30,11 +30,9 @@ public class BdStoreOpenHelper extends SQLiteOpenHelper {
      */
     @Override
     public void onCreate(SQLiteDatabase db) {
-        BdTableMarcacao tabelaMarcacao = new BdTableMarcacao(db);
-        tabelaMarcacao.cria();
+       new BdTableMarcacao(db).cria();
 
-        //bdTableCliente tabelaClientes = new bdTableCliente(db);
-        //tabelaClientes.cria();
+       new bdTableCliente(db).cria();
 
         if (DESENVOLVIMENTO){
             seedData(db);

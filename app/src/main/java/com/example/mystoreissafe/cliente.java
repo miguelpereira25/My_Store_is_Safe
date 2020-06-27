@@ -72,9 +72,9 @@ public class cliente extends AppCompatActivity implements LoaderManager.LoaderCa
         getMenuInflater().inflate(R.menu.mainmenu, menu);
         return true;
     }
-    /*public boolean onOptionsItemSelected(MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.add_vizinho) {
+        if (id == R.id.menu) {
             Intent intent = new Intent(this,RegistoVizinho.class);
             startActivity(intent);
             return true;
