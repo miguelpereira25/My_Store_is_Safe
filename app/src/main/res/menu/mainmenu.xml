@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/new_ic_foreground"
+        android:title="@string/adicionar_cliente"
+        app:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/emergency_foreground"
+        android:title="@string/emergencia"
+        app:showAsAction="ifRoom" />
+</menu>
