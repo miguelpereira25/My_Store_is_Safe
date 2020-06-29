@@ -1,5 +1,6 @@
 package com.example.mystoreissafe;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
@@ -37,13 +38,25 @@ public class bdTableCliente implements BaseColumns {
          );
 
 
-        public Cursor query(String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy)
-        {
-        }
-        
+
+
         }
 
         
 
+
+    public Cursor query(String[] columns, String selection, String[] selectionArgs, String groupBy, String having, String orderBy) {
+        return db.query(NOME_TABELA, columns, selection, selectionArgs, groupBy, having, orderBy);
+    }
+    public long insert(ContentValues values) {
+        return db.insert(NOME_TABELA, null, values);
+    }
+
+    public int update(ContentValues values, String whereClause, String [] whereArgs) {
+        return db.update(NOME_TABELA, values, whereClause, whereArgs);
+    }
+
+    public int delete(String whereClause, String[] whereArgs) {
+        return db.delete(NOME_TABELA, whereClause, whereArgs);
     }
 }

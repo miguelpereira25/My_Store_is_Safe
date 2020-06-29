@@ -11,6 +11,8 @@ public class BOOk_apointment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b_o_ok_apointment);
     }
-
+    public void save(){
+        
+    }
     /*Toast.makeText(Agenda.this,getString(R.string.agendado),Toast.LENGTH_LONG).show();*/
 }
