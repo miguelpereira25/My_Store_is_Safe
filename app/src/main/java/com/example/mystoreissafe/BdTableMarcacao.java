@@ -5,6 +5,7 @@ import android.provider.BaseColumns;
 
 public class BdTableMarcacao implements BaseColumns {
     public BdTableMarcacao(SQLiteDatabase db) {
+
     }
 
     public void cria() {

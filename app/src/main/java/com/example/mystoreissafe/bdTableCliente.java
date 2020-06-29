@@ -27,14 +27,14 @@ public class bdTableCliente implements BaseColumns {
 
     public void cria(){
         db.execSQL(
-                "CREATE TABLE" + NOME_TABELA +"(" +
+                "CREATE TABLE " + NOME_TABELA +"(" +
                 _ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"+
-                CAMPO_NOME + "TEXT NOT NULL, " +
-                CAMPO_CONTRIBUINTE + "INTEGER NOT NULL," +
-                CAMPO_CONTACT + "INTEGER NOT NULL," +
-                CAMPO_ADRESS + "TEXT NOT NULL," +
-                CAMPO_AGE + "INTEGER NOT NULL," +
-                CAMPO_TEMP + "INTEGER NOT NULL," +")"
+                CAMPO_NOME + " TEXT NOT NULL, " +
+                CAMPO_CONTRIBUINTE + " INTEGER NOT NULL," +
+                CAMPO_CONTACT + " INTEGER NOT NULL," +
+                CAMPO_ADRESS + " TEXT NOT NULL," +
+                CAMPO_AGE + " INTEGER NOT NULL," +
+                CAMPO_TEMP + " INTEGER NOT NULL" +")"
          );
 
 
