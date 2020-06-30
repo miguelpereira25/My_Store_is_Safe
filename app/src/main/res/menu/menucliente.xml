@@ -8,7 +8,7 @@
         android:title="@string/emergencia"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/settings"
+        android:id="@+id/Settings"
         android:icon="@android:drawable/ic_menu_preferences"
         android:title="@string/settings" />
 </menu>

@@ -12,4 +12,10 @@
         android:icon="@drawable/emergency_foreground"
         android:title="@string/emergencia"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/Settings"
+        android:title="@string/settings" />
+    <item
+        android:id="@+id/Info"
+        android:title="@string/info" />
 </menu>

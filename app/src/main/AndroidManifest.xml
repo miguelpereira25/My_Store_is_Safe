@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BOOk_apointment"></activity>
+        <activity android:name=".App_Info"></activity>
+        <activity android:name=".Settings" />
+        <activity android:name=".BOOk_apointment" />
         <activity android:name=".loading_screen" />
         <activity android:name=".Agenda" />
         <activity android:name=".cliente" />

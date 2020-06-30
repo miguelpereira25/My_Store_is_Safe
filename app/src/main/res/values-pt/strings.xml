@@ -25,4 +25,8 @@
     <string name="estimate_time">Tempo estimado</string>
     <string name="apointment_date">Data da marcação</string>
     <string name="img1">img1</string>
+    <string name="adicionar_cliente">Adicionar Cliente</string>
+    <string name="emergencia">Emergencia</string>
+    <string name="settings">Definições</string>
+    <string name="info">Informações</string>
 </resources>
