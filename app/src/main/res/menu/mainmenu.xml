@@ -11,7 +11,9 @@
         android:id="@+id/Emergencia"
         android:icon="@drawable/emergency_foreground"
         android:title="@string/emergencia"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom"/>
+        //android:onClick="Emergencia_onclick"
+
     <item
         android:id="@+id/Settings"
         android:title="@string/settings" />

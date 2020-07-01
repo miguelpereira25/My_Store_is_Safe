@@ -77,6 +77,11 @@ public class SegundoMain extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+        if (id == R.id.Info){
+            Intent intent = new Intent(this,App_Info.class);
+            startActivity(intent);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 }
