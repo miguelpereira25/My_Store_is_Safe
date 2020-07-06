@@ -47,7 +47,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/editText_Hour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
@@ -59,10 +59,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+            app:layout_constraintTop_toBottomOf="@+id/editText_Date" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/editText_Time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
@@ -74,10 +74,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+            app:layout_constraintTop_toBottomOf="@+id/editText_Hour" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/editText_Date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="10dp"
@@ -115,7 +115,7 @@
             android:text="@string/save"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+            app:layout_constraintTop_toBottomOf="@+id/editText_Time" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

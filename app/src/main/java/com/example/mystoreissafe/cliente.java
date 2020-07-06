@@ -38,12 +38,51 @@ public class cliente extends AppCompatActivity implements LoaderManager.LoaderCa
         /*Toolbar toolbar = findViewById((R.id.toolbar));*/
         //setSupportActionBar(toolbar);
         //getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
-        editText_Name = (EditText) findViewById(R.id.editText_Name);
-        editText_contribuinte = (EditText) findViewById(R.id.editText_contribuinte);
-        editText_contact = (EditText) findViewById(R.id.editText_contact);
-        editText_adress = (EditText) findViewById(R.id.editText_adress);
-        editText_age = (EditText) findViewById(R.id.editText_age);
-        editText_temp = (EditText) findViewById(R.id.editText_temp);
+
+        button_save = (Button)findViewById(R.id.button_save);
+        button_save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editText_Name = (EditText) findViewById(R.id.editText_Name);
+                String name_Cust = editText_Name.getText().toString();
+                if(name_Cust.isEmpty()){
+                    editText_Name.setError(getString(R.string.erro));
+                    editText_Name.requestFocus();
+                    return;
+                }
+                //o cliente nao é obrigado a dar informações como o conbtribuinte
+                editText_contribuinte = (EditText) findViewById(R.id.editText_contribuinte);
+                String contribuinte = editText_contribuinte.getText().toString();
+
+                editText_contact = (EditText) findViewById(R.id.editText_contact);
+                String contact = editText_contact.getText().toString();
+                if(contact.isEmpty()){
+                    editText_contact.setError(getString(R.string.erro));
+                    editText_contact.requestFocus();
+                    return;
+                }
+
+                editText_adress = (EditText) findViewById(R.id.editText_adress);
+                String custAddress = editText_adress.getText().toString();
+                if(custAddress.isEmpty()){
+                    editText_adress.setError(getString(R.string.erro));
+                    editText_adress.requestFocus();
+                    return;
+                }
+
+                editText_age = (EditText) findViewById(R.id.editText_age);
+                String custAge = editText_age.getText().toString();
+                if(custAge.isEmpty()){
+                    editText_age.setError(getString(R.string.erro));
+                    editText_age.requestFocus();
+                    return;
+                }
+                //ainda nao tenho certeza sobre este campo
+                editText_temp = (EditText) findViewById(R.id.editText_temp);
+
+            }
+        });
+
         //getSupportLoaderManager().initLoader(ID_CURSOR_LOADER_CLIENT, null, this)
 
         button_back = (Button) findViewById(R.id.button_back);

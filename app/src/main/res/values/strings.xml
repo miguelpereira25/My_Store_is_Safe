@@ -31,5 +31,6 @@
     <string name="thanks_for_downloading">Thanks for downloading ^.^</string>
     <string name="the_creator">The creator</string>
     <string name="this_app_was_created_by_miguel_pereira_on_the_course_of_an_evaluations_for_advanced_programming_class_the_goal_is_to_achieve_an_app_wich_could_be_suitable_for_a_business_that_may_require_appointements_due_to_the_covid_19_sittuation">This app was created by MIGUEL PEREIRA on the course of an evaluations for advanced programming class, the goal is to achieve an app wich could be suitable for a business that may require appointements due to the covid-19 sittuation.</string>
-
+    <string name="erro">Please fill the fields</string>
+    <string name="ToastSave">Saved with success</string>
 </resources>
