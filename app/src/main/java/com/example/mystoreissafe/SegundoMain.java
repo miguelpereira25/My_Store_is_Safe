@@ -60,7 +60,7 @@ public class SegundoMain extends AppCompatActivity {
         startActivity(intent);
     }
     public void openBook(){
-        Intent intent = new Intent(this, BOOk_apointment.class);
+        Intent intent = new Intent(this, Book_appointment.class);
         startActivity(intent);
     }
 

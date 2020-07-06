@@ -119,7 +119,7 @@ public class cliente extends AppCompatActivity implements LoaderManager.LoaderCa
 
             }
             /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-   /* public boolean onCreateOptionsMenu(Menu menu) {
+   public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menucliente, menu);
         return true;
     }

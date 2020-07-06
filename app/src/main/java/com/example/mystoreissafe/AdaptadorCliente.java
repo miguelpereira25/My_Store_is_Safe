@@ -26,7 +26,6 @@ public class AdaptadorCliente extends RecyclerView.Adapter<AdaptadorCliente.View
     }
     @NonNull
 
-    @NonNull
     @Override
     public AdaptadorCliente.ViewHolderCliente onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemCliente = LayoutInflater.from(context).inflate(R.layout.item_cliente, parent, false);
@@ -38,5 +37,15 @@ public class AdaptadorCliente extends RecyclerView.Adapter<AdaptadorCliente.View
         
         super.onBindViewHolder(holder, position, payloads);
     }
-}
-*/
+
+    @Override
+    public int getItemCount() {
+        return 0;
+    }
+
+    public class ViewHolderCliente extends RecyclerView.ViewHolder {
+        public ViewHolderCliente(View itemCliente) {
+            super(itemCliente);
+        }
+    }
+}*/

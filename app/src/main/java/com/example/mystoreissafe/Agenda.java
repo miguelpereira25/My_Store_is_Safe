@@ -25,6 +25,7 @@ public class Agenda extends AppCompatActivity {
 
             }
         });
+            //press this button to return to the main menu
 
         button_cancelar = (Button) findViewById(R.id.button_cancelar);
         button_cancelar.setOnClickListener(new View.OnClickListener() {
@@ -41,7 +42,7 @@ public class Agenda extends AppCompatActivity {
         startActivity(intent);
     }
     public void openBook(){
-        Intent intent = new Intent(this, BOOk_apointment.class);
+        Intent intent = new Intent(this, Book_appointment.class);
         startActivity(intent);
     }
 }

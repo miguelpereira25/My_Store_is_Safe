@@ -11,4 +11,9 @@
         android:id="@+id/Settings"
         android:icon="@android:drawable/ic_menu_preferences"
         android:title="@string/settings" />
+    <item
+        android:id="@+id/Ver_cliente"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="@string/view_customer"
+        app:showAsAction="ifRoom" />
 </menu>
