@@ -8,15 +8,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.BufferedReader;
 
 public class BOOk_apointment extends AppCompatActivity {
+    FirebaseDatabase rootNodesuper;
+    DatabaseReference referencesuper;
 
     private Button button_save;
-  /*  private EditText editText_Customer;
+    private EditText editText_Customer;
     private EditText editText_Date;
-    private EditText editText_Hour
-    private EditText*/
+    private EditText editText_Hour;
+    private EditText editText_Time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +61,17 @@ public class BOOk_apointment extends AppCompatActivity {
                     editText_Time.requestFocus();
                     return;
                 }
+
+                rootNodesuper = FirebaseDatabase.getInstance();
+                referencesuper = rootNodesuper.getReference("Cliente");
+
+                clienteHelpClass helperClass = new clienteHelpClass(nomeCliente, dataMarc, hourMarc, timeMarc);
+
+                //The database should sort the appointments by date
+
+                referencesuper.child(dataMarc).setValue(helperClass);
+
+                Toast.makeText(getBaseContext(), R.string.sucesso, Toast.LENGTH_LONG).show();
                 finish();
                 Toast.makeText(BOOk_apointment.this, getString(R.string.ToastSave),Toast.LENGTH_LONG).show();
 

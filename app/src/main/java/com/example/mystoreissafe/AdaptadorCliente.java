@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
-
+/*
 public class AdaptadorCliente extends RecyclerView.Adapter<AdaptadorCliente.ViewHolderCliente> {
     private final Context context;
     private Cursor cursor = null;
@@ -39,3 +39,4 @@ public class AdaptadorCliente extends RecyclerView.Adapter<AdaptadorCliente.View
         super.onBindViewHolder(holder, position, payloads);
     }
 }
+*/
