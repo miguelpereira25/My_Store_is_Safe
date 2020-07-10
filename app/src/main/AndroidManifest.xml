@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mystoreissafe">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,11 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Book_appointment"></activity>
+        <activity android:name=".ListaMarcacoes"></activity>
+        <activity android:name=".Book_appointment" />
         <activity android:name=".ListaClientes" />
         <activity android:name=".App_Info" />
         <activity android:name=".Settings" />
-        <activity android:name=".BOOk_apointment" />
         <activity android:name=".loading_screen" />
         <activity android:name=".Agenda" />
         <activity android:name=".cliente" />

@@ -125,13 +125,19 @@ public class cliente extends AppCompatActivity implements LoaderManager.LoaderCa
     }
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.menu_cliente) {
-            Intent intent = new Intent(this.cliente.class);
+        if (id == R.id.Ver_cliente) {
+            Intent intent = new Intent(this,ListaClientes.class);
+            startActivity(intent);
+            return true;
+        }
+
+        if (id == R.id.Info){
+            Intent intent = new Intent(this,App_Info.class);
             startActivity(intent);
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }*/
+    }
 
 
    /* @NonNull

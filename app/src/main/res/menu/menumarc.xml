@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item
         android:id="@+id/emergency"
         android:icon="@drawable/emergency_foreground"
@@ -12,9 +11,9 @@
         android:icon="@android:drawable/ic_menu_preferences"
         android:title="@string/settings" />
     <item
-        android:id="@+id/Ver_cliente"
-        android:icon="@android:drawable/ic_menu_myplaces"
-        android:title="@string/view_customer"
+        android:id="@id/ver_marc"
+        android:icon="@drawable/new_ic_foreground"
+        android:title="@string/ver_marca_o"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/info"
