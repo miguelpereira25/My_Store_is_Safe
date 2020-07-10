@@ -1,22 +1,16 @@
 package com.example.mystoreissafe;
 
 public class AppointmentHelpClass {
-    String nomeCliente, dataMarc, hourMarc, timeMarc;
+    String  dataMarc, hourMarc, nomeCliente, timeMarc;
 
     public AppointmentHelpClass(String nomeCliente, String dataMarc, String hourMarc, String timeMarc) {
-        this.nomeCliente = nomeCliente;
         this.dataMarc = dataMarc;
         this.hourMarc = hourMarc;
+        this.nomeCliente = nomeCliente;
         this.timeMarc = timeMarc;
     }
 
-    public String getNomeCliente() {
-        return nomeCliente;
-    }
 
-    public void setNomeCliente(String nomeCliente) {
-        this.nomeCliente = nomeCliente;
-    }
 
     public String getDataMarc() {
         return dataMarc;
@@ -32,6 +26,14 @@ public class AppointmentHelpClass {
 
     public void setHourMarc(String hourMarc) {
         this.hourMarc = hourMarc;
+    }
+
+    public String getNomeCliente() {
+        return nomeCliente;
+    }
+
+    public void setNomeCliente(String nomeCliente) {
+        this.nomeCliente = nomeCliente;
     }
 
     public String getTimeMarc() {

@@ -21,6 +21,7 @@ import java.io.BufferedReader;
       DatabaseReference referencesuper;
 
         private Button button_save;
+        private Button button_back;
         private EditText editText_Customer;
         private EditText editText_Date;
         private EditText editText_Hour;
@@ -81,6 +82,13 @@ import java.io.BufferedReader;
 
                 }
             });
+            button_back = (Button) findViewById(R.id.button_back);
+            button_back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openmain();
+                }
+            });
         }
         public boolean onCreateOptionsMenu(Menu menu) {
             getMenuInflater().inflate(R.menu.menumarc, menu);
@@ -94,5 +102,10 @@ import java.io.BufferedReader;
                 return true;
             }
             return super.onOptionsItemSelected(item);
+        }
+
+        public void openmain(){
+            Intent intent = new Intent(this,SegundoMain.class);
+            startActivity(intent);
         }
 }
