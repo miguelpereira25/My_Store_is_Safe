@@ -20,10 +20,11 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class cliente extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
-    FirebaseDatabase rootNodesuper;
-    DatabaseReference referencesuper;
-    private static final int ID_CURSOR_LOADER_CLIENT = 0;
+public class cliente extends AppCompatActivity {
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
+
+
 
     private EditText editText_Name;
     private EditText editText_contribuinte;
@@ -38,14 +39,11 @@ public class cliente extends AppCompatActivity implements LoaderManager.LoaderCa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cliente);
-        /*Toolbar toolbar = findViewById((R.id.toolbar));*/
-        //setSupportActionBar(toolbar);
-        //getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         button_save = (Button) findViewById(R.id.button_save);
         button_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText editText_Name = (EditText) findViewById(R.id.editText_Name);
+                editText_Name = (EditText) findViewById(R.id.editText_Name);
                 final String nameCust = editText_Name.getText().toString();
                 if (nameCust.isEmpty()) {
                     editText_Name.setError(getString(R.string.erro));
@@ -83,12 +81,12 @@ public class cliente extends AppCompatActivity implements LoaderManager.LoaderCa
                 editText_temp = (EditText) findViewById(R.id.editText_temp);
                 final String temp = editText_temp.getText().toString();
 
-                        rootNodesuper = FirebaseDatabase.getInstance();
-                        referencesuper = rootNodesuper.getReference("Cliente");
+                        rootNode = FirebaseDatabase.getInstance();
+                        reference = rootNode.getReference("Clientes");
 
                         clienteHelpClass helperClass = new clienteHelpClass(nameCust, contribuinte, contact, custAddress, custAge, temp);
 
-                        referencesuper.child(nameCust).setValue(helperClass);
+                        reference.child(nameCust).setValue(helperClass);
 
                         Toast.makeText(getBaseContext(), R.string.sucesso, Toast.LENGTH_LONG).show();
                         finish();
@@ -96,16 +94,6 @@ public class cliente extends AppCompatActivity implements LoaderManager.LoaderCa
 
                     }
                 });
-            }
-
-
-            public void inserirCliente(View v) {
-
-                /*public void openlistsuper() {
-                    Intent intent = new Intent(this, ListaClientes.class);
-                    startActivity(intent);*/
-
-                //getSupportLoaderManager().initLoader(ID_CURSOR_LOADER_CLIENT, null, this)
 
                 Button button_back = (Button) findViewById(R.id.button_back);
                 button_back.setOnClickListener(new View.OnClickListener() {
@@ -137,48 +125,20 @@ public class cliente extends AppCompatActivity implements LoaderManager.LoaderCa
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-
-   /* @NonNull
-    @Override
-    public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
-        return null;
-    }
-
-    @Override
-    public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
 
     }
-
-    @Override
-    public void onLoaderReset(@NonNull Loader<Cursor> loader) {
-
-    }*/
-
-
-            private void openMain() {
-                Intent intent = new Intent(this, SegundoMain.class);
-                startActivity(intent);
-            }
-
-            @NonNull
-            @Override
-            public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
-                return null;
-            }
-
-            @Override
-            public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor data) {
-
-            }
-
-            @Override
-            public void onLoaderReset(@NonNull Loader<Cursor> loader) {
-            }
-
-
+    private void openMain() {
+        Intent intent = new Intent(this, SegundoMain.class);
+        startActivity(intent);
+    }
 }
+
+
+
+
+
+
+
 
 
 

@@ -67,7 +67,7 @@ import java.io.BufferedReader;
                     }
 
                     rootNodesuper = FirebaseDatabase.getInstance();
-                    referencesuper = rootNodesuper.getReference("Marcação");
+                    referencesuper = rootNodesuper.getReference("Marcacoes");
 
                     AppointmentHelpClass helperClass = new AppointmentHelpClass(nomeCliente, dataMarc, hourMarc, timeMarc);
 

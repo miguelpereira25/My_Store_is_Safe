@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.MyViewHolder> {
-    private List<clienteHelpClass> clienteHelpClassList;
+public class ClientAdapter /*extends RecyclerView.Adapter<ClientAdapter.MyViewHolder>*/{
+   /* private List<clienteHelpClass> clienteHelpClassList;
 
     public ClientAdapter (List<clienteHelpClass>clienteHelpClassList){
         this.clienteHelpClassList = clienteHelpClassList;
@@ -63,5 +63,5 @@ public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.MyViewHold
             custIdade =(TextView) itemView.findViewById(R.id.custIdade);
             custTemp =(TextView) itemView.findViewById(R.id.custTemp);
         }
-    }
+    }*/
 }

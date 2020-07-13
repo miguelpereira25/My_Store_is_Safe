@@ -16,7 +16,6 @@
         <activity android:name=".ListaClientes" />
         <activity android:name=".App_Info" />
         <activity android:name=".Settings" />
-        <activity android:name=".loading_screen" />
         <activity android:name=".Agenda" />
         <activity android:name=".cliente" />
         <activity android:name=".SegundoMain">

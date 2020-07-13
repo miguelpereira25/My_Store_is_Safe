@@ -3,59 +3,47 @@ package com.example.mystoreissafe;
 import  androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.widget.Toast;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ListaClientes extends AppCompatActivity {
 
-   private List<clienteHelpClass> clienteHelpClassList;
-   private RecyclerView recyclerView;
-   private ClientAdapter adapter;
+    private ListView listView;
 
-
-
-    // DatabaseReference reference;
-    //RecyclerView recyclerView;
-    //ArrayList<clienteHelpClass> list;
-
-    //ClientAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_clientes);
-        recyclerView = (RecyclerView) findViewById(R.id.myRecycler);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        clienteHelpClassList = new ArrayList<>();
-        final DatabaseReference nm = FirebaseDatabase.getInstance().getReference("Cliente");
+        listView =findViewById(R.id.listView);
+        final ArrayList<String> list = new ArrayList<>();
+        final ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.list_item, list);
+        listView.setAdapter(adapter);
+
+
+        DatabaseReference nm = FirebaseDatabase.getInstance().getReference("Clientes");
         nm.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()){
+                    list.clear();
                     for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
-                        clienteHelpClass l= npsnapshot.getValue(clienteHelpClass.class);
-                        clienteHelpClassList.add(l);
+                        list.add(npsnapshot.getValue().toString());
+
                     }
-                    adapter= new ClientAdapter(clienteHelpClassList);
-                    recyclerView.setAdapter(adapter);
+                    adapter.notifyDataSetChanged();
+
                 }
-            }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -63,20 +51,6 @@ public class ListaClientes extends AppCompatActivity {
             }
         });
 
-
-        /*
-         final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("data");
-        nm.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()){
-                    for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
-                        ListData l=npsnapshot.getValue(ListData.class);
-                        listData.add(l);
-                    }
-                    adapter=new MyAdapter(listData);
-                    rv.setAdapter(adapter);
-         */
 
 
     }

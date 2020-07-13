@@ -2,6 +2,9 @@ package com.example.mystoreissafe;
 
 public class AppointmentHelpClass {
     String  dataMarc, hourMarc, nomeCliente, timeMarc;
+    public AppointmentHelpClass(){
+
+    }
 
     public AppointmentHelpClass(String nomeCliente, String dataMarc, String hourMarc, String timeMarc) {
         this.dataMarc = dataMarc;

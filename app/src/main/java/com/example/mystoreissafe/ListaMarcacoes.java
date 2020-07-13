@@ -3,10 +3,7 @@ package com.example.mystoreissafe;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -20,17 +17,17 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 public class ListaMarcacoes extends AppCompatActivity {
-    private ListView listView;
+    private ListView listView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_marcacoes);
-        listView = findViewById(R.id.listView);
+        listView2 = findViewById(R.id.listView);
         final ArrayList<String> list = new ArrayList<>();
-        final ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_item, list);
-        listView.setAdapter(adapter);
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Marcação");
+        final ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.list_item, list);
+        listView2.setAdapter(adapter);
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Marcacoes");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
